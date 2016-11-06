@@ -29,7 +29,6 @@ public class JaxbClass {
 				
 				System.out.println(root.equals(root1));
 				
-				Node diff = ObjectDifferBuilder.buildDefault().compare(courseold, coursenew);
 				
 			} catch (JAXBException e) {
 				e.printStackTrace();
