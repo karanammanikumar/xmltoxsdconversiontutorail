@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xsd:element name="project">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="modelVersion" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="groupId" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="artifactId" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="packaging" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="version" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="url" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+        <xsd:element name="licenses" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="license" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="url" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+                    <xsd:element name="distribution" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="developers" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="developer" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="email" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="properties" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="jdk.version" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="spring.version" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="spring.security.version" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="jstl.version" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="dependencies" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="dependency" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="groupId" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="artifactId" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="version" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="build" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="finalName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="plugins" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="plugin" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="groupId" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="artifactId" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="version" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="configuration" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="source" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                <xsd:element name="target" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="schemaLocation" type="xsd:anyURI" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="table">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="T" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="C_CUSTKEY" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="C_NAME" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="C_ADDRESS" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="C_NATIONKEY" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="C_PHONE" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="C_ACCTBAL" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="C_MKTSEGMENT" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="C_COMMENT" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="ID" type="xsd:normalizedString" use="required"/>
+     </xsd:complexType>
+    <xsd:attribute name="ID" type="xsd:normalizedString" use="required"/>
+  </xsd:element>
+</xsd:schema>

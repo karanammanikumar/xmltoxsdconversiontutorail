@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="root">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="course" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="reg_num" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="subj" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="crse" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="sect" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="title" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="units" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="instructor" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="days" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="time" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="start_time" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="end_time" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="place" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="building" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="room" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
